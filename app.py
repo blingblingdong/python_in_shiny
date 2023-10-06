@@ -11,9 +11,9 @@ page_header=ui.tags.nav(
       HTML("<a class='navbar-brand'>聊天機器人</a>")),
    ui.tags.ul(
      {"class": "nav navbar-nav"},
-     HTML("<li><a class='active' href='https://www.w3schools.com/bootstrap/bootstrap_navbar.asp'>對話機器人</a></li>"),
-     HTML("<li><a class='active' href='#'><span class='glyphicon glyphicon-info-sign'></span> 查看原始碼</a></li>"),
-     HTML("<li><a class='active' href=''><span class='glyphicon glyphicon-thumbs-up'></span>介紹簡報</a></li>")
+     HTML("<li><a class='active' href='https://lsysocute.shinyapps.io/shinyrobot/'>對話機器人</a></li>"),
+     HTML("<li><a class='active' href='https://github.com/blingblingdong/python_in_shiny'><span class='glyphicon glyphicon-info-sign'></span> 查看原始碼</a></li>"),
+     HTML("<li><a class='active' href='https://rpubs.com/lsysocute/shiny-robot'><span class='glyphicon glyphicon-thumbs-up'></span>介紹簡報</a></li>")
    )
         )
    )
@@ -55,7 +55,6 @@ app_ui = ui.page_fluid(
       ),
 
       ui.panel_main(
-        ui.div(
         ui.output_text("u_out1"),
         ui.output_text("c_out1"),
         ui.br(),
@@ -64,7 +63,6 @@ app_ui = ui.page_fluid(
         ui.br(),
         ui.output_text("u_out3"),
         ui.output_text("c_out3")
-      )
     ),
   ),
 )
@@ -117,7 +115,7 @@ def server(input, output, session):
         elif (input.u_in3() == "不好")and(input.x1()==False):
             return f"垂頭喪氣，自憐自艾，少在那邊享受悲情的人設"
         
-    
+  
 app = App(app_ui, server)
 
 
